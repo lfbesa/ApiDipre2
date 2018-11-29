@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  date: 2018-11-29
+  epigraph: MyString
+  to_date: MyString
+  url: MyString
+  hour: MyString
+
+two:
+  title: MyString
+  description: MyText
+  date: 2018-11-29
+  epigraph: MyString
+  to_date: MyString
+  url: MyString
+  hour: MyString
