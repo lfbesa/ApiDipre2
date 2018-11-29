@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1, defaults: { format: :json } do
       resources :contacts
-          resources :events
+      resources :articles
+      resources :events
     end
   end
 end
