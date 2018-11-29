@@ -3,11 +3,10 @@ class CreateArticles < ActiveRecord::Migration[5.2]
     create_table :articles do |t|
       t.string :title
       t.text :description
-      t.date :date
-      t.string :epigraph
-      t.string :to_date
+      t.date :publishedAt
+      t.string :source
+      t.string :urlToImage
       t.string :url
-      t.string :hour
 
       t.timestamps
     end

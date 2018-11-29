@@ -3,17 +3,15 @@
 one:
   title: MyString
   description: MyText
-  date: 2018-11-29
-  epigraph: MyString
-  to_date: MyString
+  publishedAt: 2018-11-29
+  source: MyString
+  urlToImage: MyString
   url: MyString
-  hour: MyString
 
 two:
   title: MyString
   description: MyText
-  date: 2018-11-29
-  epigraph: MyString
-  to_date: MyString
+  publishedAt: 2018-11-29
+  source: MyString
+  urlToImage: MyString
   url: MyString
-  hour: MyString

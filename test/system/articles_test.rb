@@ -14,13 +14,12 @@ class ArticlesTest < ApplicationSystemTestCase
     visit articles_url
     click_on "New Article"
 
-    fill_in "Date", with: @article.date
     fill_in "Description", with: @article.description
-    fill_in "Epigraph", with: @article.epigraph
-    fill_in "Hour", with: @article.hour
+    fill_in "Publishedat", with: @article.publishedAt
+    fill_in "Source", with: @article.source
     fill_in "Title", with: @article.title
-    fill_in "To Date", with: @article.to_date
     fill_in "Url", with: @article.url
+    fill_in "Urltoimage", with: @article.urlToImage
     click_on "Create Article"
 
     assert_text "Article was successfully created"
@@ -31,13 +30,12 @@ class ArticlesTest < ApplicationSystemTestCase
     visit articles_url
     click_on "Edit", match: :first
 
-    fill_in "Date", with: @article.date
     fill_in "Description", with: @article.description
-    fill_in "Epigraph", with: @article.epigraph
-    fill_in "Hour", with: @article.hour
+    fill_in "Publishedat", with: @article.publishedAt
+    fill_in "Source", with: @article.source
     fill_in "Title", with: @article.title
-    fill_in "To Date", with: @article.to_date
     fill_in "Url", with: @article.url
+    fill_in "Urltoimage", with: @article.urlToImage
     click_on "Update Article"
 
     assert_text "Article was successfully updated"

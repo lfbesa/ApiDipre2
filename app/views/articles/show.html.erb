@@ -11,28 +11,23 @@
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @article.date %>
+  <strong>Publishedat:</strong>
+  <%= @article.publishedAt %>
 </p>
 
 <p>
-  <strong>Epigraph:</strong>
-  <%= @article.epigraph %>
+  <strong>Source:</strong>
+  <%= @article.source %>
 </p>
 
 <p>
-  <strong>To date:</strong>
-  <%= @article.to_date %>
+  <strong>Urltoimage:</strong>
+  <%= @article.urlToImage %>
 </p>
 
 <p>
   <strong>Url:</strong>
   <%= @article.url %>
-</p>
-
-<p>
-  <strong>Hour:</strong>
-  <%= @article.hour %>
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
