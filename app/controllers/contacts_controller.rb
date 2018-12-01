@@ -14,6 +14,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   def new
+    redirect_to contacts_path
     @contact = Contact.new
   end
 
