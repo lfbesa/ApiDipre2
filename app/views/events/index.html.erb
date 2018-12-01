@@ -2,64 +2,48 @@
 
 <h1>Events</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Date</th>
-      <th>Epigraph</th>
-      <th>To date</th>
-      <th>Url</th>
-      <th>Hour</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.description %></td>
-        <td><%= event.date %></td>
-        <td><%= event.epigraph %></td>
-        <td><%= event.to_date %></td>
-        <td><%= event.url %></td>
-        <td><%= event.hour %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>
-
 <div class="jss12 jss16 jss13">
   <table class="jss320 table">
     <thead class="jss321">
       <tr class="jss322 jss325">
-        <th class="jss327 jss328" scope="col">Estado</th>
-        <th class="jss327 jss328" scope="col"><span tabindex="0" class="jss91 jss901 jss902" role="button">Nombre<svg class="jss787 jss903 jss905" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path></svg></span></th>
-        <th class="jss327 jss328 center" scope="col">Última actualización de contenido</th>
-        <th class="jss327 jss328 center" scope="col">Empresa</th>
-        <th class="jss327 jss328 center" scope="col">Jerarquía 1</th>
-        <th class="jss327 jss328 center" scope="col">Jerarquía 2</th>
-        <th class="jss327 jss328 center" scope="col">Acciones</th>
+        <th class="jss327 jss328" scope="col">Título</th>
+        <th class="jss327 jss328" scope="col"><span tabindex="0" class="jss91 jss901 jss902" role="button">Descripción</span></th>
+        <th class="jss327 jss328 center" scope="col">Epígrafe</th>
+        <th class="jss327 jss328 center" scope="col">Fecha inicio</th>
+        <th class="jss327 jss328 center" scope="col">Fecha de fin</th>
+        <th class="jss327 jss328 center" scope="col">Hora</th>
+        <th class="jss327 jss328 center" scope="col">Url</th>
       </tr>
     </thead>
     <tbody class="jss348">
-      <tr class="jss322">
-        <td class="jss327 jss329"><svg class="jss787 jss789" focusable="false" viewBox="0 0 24 24" aria-hidden="true" style="width: 36px; height: 36px;"><g><path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></g></svg></td>
-        <td class="jss327 jss329">ssh-white1-box-hotspot</td>
-        <td class="jss327 jss329 center" style="width: 20%;">11/29 - 15:21</td>
-        <td class="jss327 jss329 center" style="width: 20%;">PUC</td>
-        <td class="jss327 jss329 center">San Joaquin</td>
-        <td class="jss327 jss329 center">Escuela de Ingenieria</td>
-      </tr>
+      <% @events.each do |event| %>
+        <tr class="jss322">
+          <td class="jss327 jss329"><%= event.title %></td>
+          <td class="jss327 jss329"><%= event.description %></td>
+          <td class="jss327 jss329 center" style="width: 20%;"><%= event.epigraph %></td>
+          <td class="jss327 jss329 center" style="width: 20%;"><%= event.date %></td>
+          <td class="jss327 jss329 center"><%= event.to_date %></td>
+          <td class="jss327 jss329 center"><%= event.hour %></td>
+          <td class="jss327 jss329 center"><%= event.url %></td>
+          <td class="jss327 jss329 center"><%= link_to 'Show', event %></td>
+          <td class="jss327 jss329 center"><%= link_to 'Edit', edit_event_path(event) %></td>
+          <td class="jss327 jss329 center"><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>
+
+<br>
+
+<button tabindex="0" class="jss91 jss359 jss368 jss369 jss371 jss372" type="button">
+  <span class="jss360">
+    <svg class="jss346 jss424" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path></g>
+    </svg>
+    <%= link_to 'Nuevo evento', new_event_path %>
+  </span>
+  <span class="jss94">
+  </span>
+</button>
+
+<%= link_to 'New Event', new_event_path %>
