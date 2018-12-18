@@ -64,7 +64,7 @@
  }
 
  .ul1 li a.active {
-     background-color: #4CAF50;
+     background-color: #505450;
      color: white;
  }
 
@@ -110,5 +110,5 @@
 
 .ul2 li a.active {
     color: white;
-    background-color: #4CAF50;
+    background-color: #505450;
 }

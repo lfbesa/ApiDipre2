@@ -8,7 +8,6 @@
     <thead class="jss321">
       <tr class="jss322 jss325">
         <th class="jss327 jss328" scope="col">Título</th>
-        <th class="jss327 jss328" scope="col"><span tabindex="0" class="jss91 jss901 jss902" role="button">Descripción</span></th>
         <th class="jss327 jss328 center" scope="col">Publicada en</th>
         <th class="jss327 jss328 center" scope="col">Fuente</th>
         <th class="jss327 jss328 center" scope="col">Url</th>
@@ -21,7 +20,6 @@
       <% @articles.each do |article| %>
         <tr class="jss322">
           <td class="jss327 jss329" style="width: 10%;"><%= article.title %></td>
-          <td class="jss327 jss329" style="width: 20%;"><%= article.description[0..100] << "..." %></td>
           <td class="jss327 jss329 center"><%= article.publishedAt %></td>
           <td class="jss327 jss329"><%= article.source %></td>
           <td class="jss327 jss329"><%= article.urlToImage %></td>
