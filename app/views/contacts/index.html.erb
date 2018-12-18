@@ -17,7 +17,7 @@
         <tr class="jss322">
           <td class="jss327 jss329" style="width: 10%;"><%= contact.email %></td>
           <td class="jss327 jss329 center"><%= contact.subject %></td>
-          <td class="jss327 jss329" style="width: 20%;"><%= contact.description[0..100] << "..." %></td>
+          <td class="jss327 jss329" style="width: 20%;"><%= contact.body[0..100] << "..." %></td>
           <td class="jss327 jss329 center"><%= link_to 'Show', contact %></td>
           <td class="jss327 jss329 center"><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
