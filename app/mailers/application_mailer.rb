@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@dipre.com'
+  default from: 'appdipre@gmail.cl'
   layout 'mailer'
 end

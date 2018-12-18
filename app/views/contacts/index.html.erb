@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Contacts</h1>
+<h1>Consultas</h1>
 
 <div class="jss12 jss16 jss13">
   <table class="jss320 table">
@@ -9,7 +9,7 @@
         <th class="jss327 jss328" scope="col">Email</th>
         <th class="jss327 jss328 center" scope="col">Asunto</th>
         <th class="jss327 jss328" scope="col"><span tabindex="0" class="jss91 jss901 jss902" role="button">Cuerpo</span></th>
-        <th colspan="3"></th>
+        <th colspan="2"></th>
       </tr>
     </thead>
     <tbody class="jss348">
@@ -17,9 +17,13 @@
         <tr class="jss322">
           <td class="jss327 jss329" style="width: 10%;"><%= contact.email %></td>
           <td class="jss327 jss329 center"><%= contact.subject %></td>
-          <td class="jss327 jss329" style="width: 20%;"><%= contact.body[0..100] << "..." %></td>
-          <td class="jss327 jss329 center"><%= link_to 'Show', contact %></td>
-          <td class="jss327 jss329 center"><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% if contact.body.length > 100 %>
+            <td class="jss327 jss329" style="width: 20%;"><%= contact.body[0..100] << "..." %></td>
+          <% else %>
+            <td class="jss327 jss329" style="width: 20%;"><%= contact.body %></td>
+          <% end %>
+          <td class="jss327 jss329 center"><%= link_to 'Mostar más', contact %></td>
+          <td class="jss327 jss329 center"><%= link_to 'Eliminar', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>

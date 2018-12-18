@@ -25,9 +25,9 @@
           <td class="jss327 jss329 center"><%= event.to_date %></td>
           <td class="jss327 jss329 center"><%= event.hour %></td>
           <td class="jss327 jss329 center"><%= event.url %></td>
-          <td class="jss327 jss329 center"><%= link_to 'Show', event %></td>
-          <td class="jss327 jss329 center"><%= link_to 'Edit', edit_event_path(event) %></td>
-          <td class="jss327 jss329 center"><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="jss327 jss329 center"><%= link_to 'Ver más', event %></td>
+          <td class="jss327 jss329 center"><%= link_to 'Editar', edit_event_path(event) %></td>
+          <td class="jss327 jss329 center"><%= link_to 'Eliminar', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
