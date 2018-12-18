@@ -1,27 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Título:</strong>
   <%= @article.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Cuerpo de la noticia:</strong>
   <%= @article.description %>
 </p>
 
 <p>
-  <strong>Publishedat:</strong>
+  <strong>Publicada en:</strong>
   <%= @article.publishedAt %>
 </p>
 
 <p>
-  <strong>Source:</strong>
+  <strong>Fuente:</strong>
   <%= @article.source %>
 </p>
 
 <p>
-  <strong>Urltoimage:</strong>
+  <strong>Url a la imagen:</strong>
   <%= @article.urlToImage %>
 </p>
 
@@ -30,5 +30,5 @@
   <%= @article.url %>
 </p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Editar', edit_article_path(@article) %> |
+<%= link_to 'Atrás', articles_path %>
