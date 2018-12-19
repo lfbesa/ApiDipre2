@@ -9,9 +9,10 @@
     <!-- <li style="float:right"><p>Logged in as <strong><%= current_user.email %></strong>.</p></li> -->
   <% else %>
     <li style="float:right"><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> </li>
-
   <% end %>
 </ul>
+
+
 <!--
 <% if user_signed_in? %>
   <ul class="ul1">
