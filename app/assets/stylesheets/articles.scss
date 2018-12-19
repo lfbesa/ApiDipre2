@@ -203,6 +203,12 @@ button, input {
 }
 
 //CSS para el form
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: asset-url('fonts/ubuntu/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 .container-contact100 {
     width: 100%;
     min-height: 100vh;
@@ -227,7 +233,7 @@ button, input {
 }
 .contact100-form-title {
     display: block;
-    font-family: Ubuntu-Bold;
+    font-family: 'Ubuntu-Bold';
     font-size: 30px;
     margin: 0px;
     padding: 0px;
