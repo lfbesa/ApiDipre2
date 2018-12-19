@@ -238,7 +238,7 @@ button, input {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    color: #403866;
+    color: #505450;
     line-height: 1.2;
     text-transform: uppercase;
     text-align: center;
@@ -271,6 +271,20 @@ button, input {
     height: 62px;
     padding: 0 35px 0 35px;
     overflow: visible;
+    outline: none;
+    border: none;
+}
+.datelabel {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #fff;
+    font-family: Ubuntu-Bold;
+    font-size: 18px;
+    color: #8f8fa1;
+    line-height: 1.2;
+    height: 62px;
+    padding: 0 35px 0 35px;
     outline: none;
     border: none;
 }
@@ -311,7 +325,7 @@ button, input {
     padding: 0 20px;
     min-width: 150px;
     height: 62px;
-    background-color: transparent;
+    background-color: #505450;
     border-radius: 31px;
     font-family: Ubuntu-Bold;
     font-size: 16px;
