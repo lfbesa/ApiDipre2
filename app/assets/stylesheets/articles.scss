@@ -247,8 +247,8 @@ button, input {
     border-radius: 31px;
     margin-bottom: 16px;
     z-index: 1;
-    margin: 0px;
-    padding: 0px;
+    margin: 10px;
+    padding: 5px;
     box-sizing: border-box;
 }
 
@@ -264,14 +264,11 @@ button, input {
     line-height: 1.2;
     height: 62px;
     padding: 0 35px 0 35px;
-}
-input {
+    overflow: visible;
     outline: none;
     border: none;
 }
-button, input {
-    overflow: visible;
-}
+
 
 .focus-input100 {
     display: block;
