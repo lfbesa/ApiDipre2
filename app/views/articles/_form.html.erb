@@ -1,50 +1,57 @@
-<%= form_with(model: article, local: true) do |form| %>
-  <% if article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+<div class="container-contact100">
+  <div class="wrap-contact100">
+    <%= form_with(model: article, local: true, class: "contact100-form validate-form") do |form| %>
+      <% if article.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
-      <ul>
-      <% article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% article.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <span class="contact100-form-title">
+        Crea una nueva noticia
+      </span>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+      <div class="wrap-input100 validate-input">
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+      </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+      <div class="wrap-input100 validate-input">
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+      </div>
 
-  <div class="field">
-    <%= form.label :publishedAt %>
-    <%= form.date_select :publishedAt %>
-  </div>
+      <div class="wrap-input100 validate-input">
+        <%= form.label :publishedAt %>
+        <%= form.date_select :publishedAt %>
+      </div>
 
-  <div class="field">
-    <%= form.label :source %>
-    <%= form.text_field :source %>
-  </div>
+      <div class="wrap-input100 validate-input">
+        <%= form.label :source %>
+        <%= form.text_field :source %>
+      </div>
 
-  <div class="field">
-    <%= form.label :urlToImage %>
-    <%= form.text_field :urlToImage %>
-  </div>
+      <div class="wrap-input100 validate-input">
+        <%= form.label :urlToImage %>
+        <%= form.text_field :urlToImage %>
+      </div>
 
-  <div class="field">
-    <%= form.label :url %>
-    <%= form.text_field :url %>
-  </div>
+      <div class="wrap-input100 validate-input">
+        <%= form.label :url %>
+        <%= form.text_field :url %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
+      <div class="container-contact100-form-btn">
+        <%= form.submit %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
 
 <div class="container-contact100">
 
