@@ -202,3 +202,143 @@ button, input {
     border-radius: inherit;
     pointer-events: none;
 }
+
+//CSS para el form
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: asset-url('fonts/ubuntu/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.container-contact100 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    background-color: #f2f2f2;
+}
+.wrap-contact100 {
+    width: 550px;
+    background: transparent;
+    padding: 50px 0px 160px 0px;
+}
+.contact100-form {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.contact100-form-title {
+    display: block;
+    font-family: 'Ubuntu-Bold';
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: #505450;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 49px;
+}
+.validate-input {
+    position: relative;
+}
+.wrap-input100 {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 31px;
+    margin-bottom: 16px;
+    z-index: 1;
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.input100 {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-radius: 31px;
+    font-family: 'Ubuntu-Bold';
+    font-size: 18px;
+    color: #8f8fa1;
+    line-height: 1.2;
+    height: 62px;
+    padding: 0 35px 0 35px;
+    overflow: visible;
+    outline: none;
+    border: none;
+}
+.datelabel {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #fff;
+    font-family: 'Ubuntu-Bold';
+    font-size: 18px;
+    color: #8f8fa1;
+    line-height: 1.2;
+    height: 62px;
+    padding: 0 35px 0 35px;
+    outline: none;
+    border: none;
+}
+
+
+.focus-input100 {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 31px;
+    background-color: #fff;
+    pointer-events: none;
+    transition: all 0.4s;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container-contact100-form-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.contact100-form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 150px;
+    height: 62px;
+    background-color: #505450;
+    border-radius: 31px;
+    font-family: Ubuntu-Bold;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 1;
+    outline: none !important;
+    border: none;
+    background: transparent;
+    -webkit-appearance: button;
+    overflow: visible;
+}
