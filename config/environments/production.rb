@@ -65,7 +65,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { :host => 'pacific-reaches-89162.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'evening-refuge-97533.herokuapp.com' }
 
   #These settings are for the sending out email for active admin and consequently the   devise mailer
   ActionMailer::Base.delivery_method = :smtp
