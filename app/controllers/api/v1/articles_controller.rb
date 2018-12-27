@@ -8,7 +8,7 @@ module Api
       # GET /articles
       def index
         if @is_authenticated
-          @article = Article.where("created_at >= ?", 60.days.ago).order(publishedAt: :desc)
+          @article = Article.where("created_at >= ?", 90.days.ago).order(publishedAt: :desc)
 
           render json: @article
         else
