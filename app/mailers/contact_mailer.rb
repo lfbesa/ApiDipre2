@@ -3,8 +3,6 @@ class ContactMailer < ApplicationMailer
 
   def contact_email(contact)
     @contact = contact
-    puts 1
-    mail(to:'lfbesa@uc.cl', subject: @contact.subject, from: "appdipre@gmail.com")
-    puts 2
+    mail(to:'dipre@ing.puc.cl', subject: @contact.subject, from: "appdipre@gmail.com")
   end
 end
