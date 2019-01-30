@@ -7,7 +7,7 @@ module Api
       # GET /events
       def index
         if @is_authenticated
-          @events = Event.where("date <= ?", DateTime.now).order(date: :desc)
+          @events = Event.where("date >= ?", DateTime.now).order(date: :desc)
           render json: @events
         else
           render status: 403, json: {
