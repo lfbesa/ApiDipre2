@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :links
   resources :articles
   devise_for :users
   resources :contacts
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
       resources :contacts
       resources :articles
       resources :events
+      resources :links
     end
   end
 end

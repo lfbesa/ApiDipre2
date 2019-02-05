@@ -1,16 +1,16 @@
 module Api
   module V1
-    class ArticlesController < ActionController::API
-      before_action :set_article, only: [:show, :update, :destroy]
+    class LinksController < ActionController::API
+      before_action :set_link, only: [:show, :update, :destroy]
       before_action :authenticate_token
 
 
-      # GET /articles
+      # GET /links
       def index
         if @is_authenticated
-          @article = Article.where("created_at >= ?", 90.days.ago).order(publishedAt: :desc)
+          @link = Link.all
 
-          render json: @article
+          render json: @link
         else
           render status: 403, json: {
             message: "No TOKEN auth."
@@ -18,10 +18,10 @@ module Api
         end
       end
 
-      # GET /articles/1
+      # GET /links/1
       def show
         if @is_authenticated
-          render json: @article
+          render json: @link
         else
           render status: 403, json: {
             message: "No TOKEN auth."
@@ -29,15 +29,15 @@ module Api
         end
       end
 
-      # POST /articles
+      # POST /links
       def create
         if @is_authenticated
-          @article = Article.new(article_params)
+          @link = Link.new(link_params)
 
-          if @article.save
-            render json: @article, status: :created, location: @article
+          if @link.save
+            render json: @link, status: :created, location: @link
           else
-            render json: @article.errors, status: :unprocessable_entity
+            render json: @link.errors, status: :unprocessable_entity
           end
         else
           render status: 403, json: {
@@ -46,13 +46,13 @@ module Api
         end
       end
 
-      # PATCH/PUT /articles/1
+      # PATCH/PUT /links/1
       def update
         if @is_authenticated
-          if @article.update(article_params)
-            render json: @article
+          if @link.update(link_params)
+            render json: @link
           else
-            render json: @article.errors, status: :unprocessable_entity
+            render json: @link.errors, status: :unprocessable_entity
           end
         else
           render status: 403, json: {
@@ -61,10 +61,10 @@ module Api
         end
       end
 
-      # DELETE /articles/1
+      # DELETE /links/1
       def destroy
         if @is_authenticated
-          @article.destroy
+          @link.destroy
         else
           render status: 403, json: {
             message: "No TOKEN auth."
@@ -83,13 +83,13 @@ module Api
           end
         end
         # Use callbacks to share common setup or constraints between actions.
-        def set_article
-          @article = Article.find(params[:id])
+        def set_link
+          @link = Link.find(params[:id])
         end
 
         # Only allow a trusted parameter "white list" through.
-        def article_params
-          params.require(:article).permit(:title, :description, :publishedAt, :source, :urlToImage, :url)
+        def link_params
+          params.require(:link).permit(:title, :description, :url)
         end
     end
   end

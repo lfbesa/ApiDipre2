@@ -5,7 +5,7 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.text :description
       t.date :date
       t.string :epigraph
-      t.string :to_date
+      t.date :to_date
       t.string :url
       t.string :hour
 
