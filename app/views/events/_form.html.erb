@@ -39,7 +39,8 @@
       </div>
 
       <div class="wrap-input100 validate-input">
-        <%= form.text_field :to_date, class: "input100", placeholder: "Fecha de fin" %>
+        <label for="event_date" class="datelabel" >Fecha de fin:</label>
+        <%= form.date_select :to_date, class: "input100", placeholder: "Fecha" %>
         <span class="focus-input100"></span>
       </div>
 

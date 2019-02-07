@@ -6,3 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 user = User.create! :email => 'admin@dipre.com', :password => 'appdipre', :password_confirmation => 'appdipre'
+user = User.create! :email => 'admin@dipre.cl', :password => 'appdipre', :password_confirmation => 'appdipre'
